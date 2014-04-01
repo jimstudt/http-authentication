@@ -24,14 +24,14 @@ password is preceded by {PLAIN}.
 ~~~ go
 import (
   "github.com/codegangsta/martini"
-  "github.com/jimstudt/http-authentication/htpasswd"
+  "github.com/jimstudt/http-authentication/basic"
   "log"
 )
 
 func main() {
   m := martini.Classic()
 
-  pw,err := htpasswd.New("My Realm", "./my-htpasswd-file", htpasswd.DefaultSystems, nil)
+  pw,err := basic.New("My Realm", "./my-htpasswd-file", htpasswd.DefaultSystems, nil)
   if ( err != nil) {
     log.Fatalf("Unable to read my htpassword file: %s", err.Error())
   }

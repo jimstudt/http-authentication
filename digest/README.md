@@ -44,12 +44,12 @@ import (
 
 func main() {
   m := martini.Classic()
-  myUserStore := auth.NewSimpleUserStore(  map[string]string{
+  myUserStore := digest.NewSimpleUserStore(  map[string]string{
 			"foo:mortal": "3791e8e14a10b3666ba15d9e78e4b359",    // pw is 'bar'
 			"Mufasa:testrealm@host.com": "939e7578ed9e3c518a452acee763bce9",   // pw is 'Circle Of Life'
                  })
 
-  digester := auth.NewDigestHandler( "mortal", nil, nil, myUserStore )
+  digester := digest.NewDigestHandler( "mortal", nil, nil, myUserStore )
   m.Use( digester.ServeHTTP )   // this will force authentication of all requests, you can be more specific.
 
   //...
@@ -62,14 +62,14 @@ To use an Apache style htdigest file, one would instead...
      m := martini.Classic()
      ...
      // Read file: hint, the nil is standing in for a malformed line reporter function.
-     myUserFile,err := auth.NewHtdigestUserStore("path/to/my/htdigest/file", nil)
+     myUserFile,err := digest.NewHtdigestUserStore("path/to/my/htdigest/file", nil)
      if err != nil {
 		log.Fatalf("Unable to load password file: %s", err.Error())
      }
      ...
      myUserFile.ReloadOn(syscall.SIGHUP, nil)   // optional, that nil is the bad line reporter again
      ...
-     digester := auth.NewDigestHandler( "My Realm", nil, nil, myUserFile )
+     digester := digest.NewDigestHandler( "My Realm", nil, nil, myUserFile )
      ...
      m.Post("/my-sensitive-uri", digester.ServeHTTP, mySensitiveHandler)  // just protect this one, notice chained handlers.
 ~~~
