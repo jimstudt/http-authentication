@@ -1,4 +1,4 @@
-# auth/htpasswd [![GoDoc](https://godoc.org/github.com/jimstudt/auth/htpasswd?status.png)](http://godoc.org/github.com/jimstudt/auth/htpasswd)
+# auth/htpasswd [![GoDoc](https://godoc.org/github.com/jimstudt/http-authentication/htpasswd?status.png)](http://godoc.org/github.com/jimstudt/http-authentication/htpasswd)
 
 Authenticate using Apache-style htpasswd files and HTTP Basic Authentication.
 
@@ -24,7 +24,7 @@ password is preceded by {PLAIN}.
 ~~~ go
 import (
   "github.com/codegangsta/martini"
-  "github.com/martini-contrib/auth/htpasswd"
+  "github.com/jimstudt/http-authentication/htpasswd"
   "log"
 )
 
@@ -58,7 +58,7 @@ func main() {
 
 ## API Documentation
 
-The API is documented using godoc and also available at [godoc.org](http://godoc.org/github.com/jimstudt/auth/htpasswd)
+The API is documented using godoc and also available at [godoc.org](http://godoc.org/github.com/jimstudt/http-authentication/htpasswd)
 ~~~
 
 
