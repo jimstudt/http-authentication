@@ -1,4 +1,4 @@
-# auth/htpasswd [![GoDoc](https://godoc.org/github.com/jimstudt/http-authentication/htpasswd?status.png)](http://godoc.org/github.com/jimstudt/http-authentication/htpasswd)
+# auth/htpasswd [![GoDoc](https://godoc.org/github.com/jimstudt/http-authentication/basic?status.png)](http://godoc.org/github.com/jimstudt/http-authentication/basic)
 
 Authenticate using Apache-style htpasswd files and HTTP Basic Authentication.
 
@@ -58,7 +58,7 @@ func main() {
 
 ## API Documentation
 
-The API is documented using godoc and also available at [godoc.org](http://godoc.org/github.com/jimstudt/http-authentication/htpasswd)
+The API is documented using godoc and also available at [godoc.org](http://godoc.org/github.com/jimstudt/http-authentication/basic)
 ~~~
 
 
