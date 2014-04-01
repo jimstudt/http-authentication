@@ -1,15 +1,7 @@
-# auth/digest [![GoDoc](https://godoc.org/github.com/jimstudt/auth/digest?status.png)](http://godoc.org/github.com/jimstudt/auth/digest)
+# auth/digest [![GoDoc](https://godoc.org/github.com/jimstudt/http-authentication/digest?status.png)](http://godoc.org/github.com/jimstudt/http-authentication/digest)
 
 Authenticate using HTTP Digest Authentication for [Martini](https://github.com/codegangsta/martini)
 or similar HTTP request routers.
-
-## Current State
-
-Forked from martini-contrib/auth. It was intended to be a minor addition, but has
-gotten rather large and might want to move to its own name space. It may merge into
-martini-contrib or move somewhere else entirely.
-
-In any event, it is **early days**.
 
 ## Overview
 
@@ -46,7 +38,7 @@ To specify your account information in a map, one might do this...
 ~~~ go
 import (
   "github.com/codegangsta/martini"
-  "github.com/martini-contrib/auth/digest"
+  "github.com/jimstudt/http-authentication/digest"
   "log"
 )
 
@@ -84,7 +76,7 @@ To use an Apache style htdigest file, one would instead...
 
 ## Documentation
 
-The API documentation is available using godoc and at [godoc.org](http://godoc.org/github.com/jimstudt/auth/digest)
+The API documentation is available using godoc and at [godoc.org](http://godoc.org/github.com/jimstudt/http-authentication/digest)
 
 
 
