@@ -24,7 +24,7 @@ password is preceded by {PLAIN}.
 ~~~ go
 import (
   "github.com/codegangsta/martini"
-  "github.com/jimstudt/http-authentication/htpasswd"
+  "github.com/jimstudt/http-authentication/basic"
   "log"
 )
 
