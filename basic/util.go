@@ -1,4 +1,4 @@
-package htpasswd
+package basic
 
 import (
 	"crypto/sha1"

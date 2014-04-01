@@ -9,7 +9,7 @@
 //      m.Use(myauth.Handler)
 // ...to configure your authentication and then use the myauth.Handler as a middleware handler in your Martini stack.
 // You should read about that nil, as well as Reread() too.
-package htpasswd
+package basic
 
 import (
 	"bufio"

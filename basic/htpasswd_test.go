@@ -1,4 +1,4 @@
-package htpasswd
+package basic
 
 import (
 	"encoding/base64"
