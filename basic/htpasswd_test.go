@@ -1051,7 +1051,7 @@ func testSystem(t *testing.T, name string, contents string) {
 			req.Header.Add("Authorization", authStr)
 			resp := httptest.NewRecorder()
 
-			htp.Handler(resp, req)
+			htp.ServeHTTP(resp, req)
 
 			return resp
 		}
